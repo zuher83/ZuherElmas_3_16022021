@@ -192,6 +192,10 @@ main {
     font-weight: normal;
   }
 
+  hgroup {
+    margin-bottom: 20px;
+  }
+
   button {
     background: linear-gradient($secondary, $primary);
     color: #fff;
