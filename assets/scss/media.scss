@@ -1,3 +1,10 @@
+@media screen and (max-width: 1024px) {
+  //todo ipad pro fix
+  aside .select {
+    flex-flow: column;
+    flex-direction: column;
+  }
+}
 
 @media screen and (max-width: 768px) {
   aside .select {
@@ -56,19 +63,21 @@
       border-top-left-radius: 35px;
       border-top-right-radius: 35px;
       z-index: 999;
-      margin-top: -35px;
+      margin-top: -50px;
 
       h1.shrikhand {
-        padding: 30px 10px 20px 10px;
+        padding: 30px 10px 20px 15px;
         font-size: 1.5rem;
       }
 
-      .card {
-        margin: 10px 0;
-        border-radius: 15px;
-        cursor: pointer;
-        display: flex;
-        flex-direction: row;
+      .cards {
+        .card {
+          margin: 10px 0;
+          border-radius: 15px;
+          cursor: pointer;
+          display: flex;
+          flex-direction: row;
+        }
       }
     }
   }
@@ -82,6 +91,7 @@
       position: relative;
 
     }
+
     .step-button {
       flex: 0 0 100%;
       margin-right: 0;
