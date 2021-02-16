@@ -56,7 +56,8 @@ h1 {
   font-weight: bold;
   line-height: 1; }
   h1.shrikhand {
-    font-family: Shrikhand, sans-serif; }
+    font-family: Shrikhand, sans-serif;
+    padding: 20px 0 20px 20px; }
 
 h2 {
   display: block;
@@ -94,7 +95,8 @@ header {
   flex-flow: wrap;
   flex-direction: column;
   align-items: center;
-  position: relative; }
+  position: relative;
+  z-index: -1; }
   header .header-left {
     width: 375px; }
   header .search-location {
@@ -113,14 +115,24 @@ header {
     left: 20px;
     top: 20px;
     display: block; }
-  header .cover-img .cover-img img {
-    object-fit: cover; }
+  header .cover-img {
+    height: 350px;
+    width: 100%; }
+    header .cover-img img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover; }
 
 main {
   max-width: 1680px;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  z-index: 999;
+  margin-top: -40px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px; }
 
 .reserve {
   text-align: center;
@@ -265,32 +277,78 @@ aside {
           transition: all 0.5s 0s ease;
           color: #9356dc; }
 
-.menu .cards h2.sub-title {
-  font-size: 1rem;
-  font-weight: normal; }
-  .menu .cards h2.sub-title:after {
-    border-bottom: 2px solid #99e2d0;
-    content: "";
-    display: block;
-    width: 10%;
-    padding-top: 3px; }
-.menu .cards .card {
-  margin: 10px 0;
-  border-radius: 15px; }
-  .menu .cards .card hgroup {
-    padding: 10px; }
-  .menu .cards .card h1 {
-    font-size: 1.125rem;
-    margin: 0 0 5px 0; }
-  .menu .cards .card h2 {
+.menu .cards {
+  background-color: transparent;
+  flex-flow: row wrap;
+  margin-right: 0;
+  margin-left: 0; }
+  .menu .cards h2.sub-title {
     font-size: 1rem;
     font-weight: normal;
-    display: inline-block;
-    color: gray; }
-  .menu .cards .card .price {
-    float: right;
-    font-weight: bold;
-    font-size: 1.125rem; }
+    width: 100%; }
+    .menu .cards h2.sub-title:after {
+      border-bottom: 2px solid #99e2d0;
+      content: "";
+      display: block;
+      width: 10%;
+      padding-top: 3px; }
+  .menu .cards .card {
+    border-radius: 15px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row; }
+    .menu .cards .card hgroup {
+      padding: 10px;
+      flex: 0 0 100%; }
+    .menu .cards .card h1 {
+      font-size: 1.125rem;
+      margin: 0 0 5px 0; }
+    .menu .cards .card h2 {
+      font-size: 1rem;
+      font-weight: normal;
+      display: inline-block;
+      color: gray; }
+    .menu .cards .card .caption-check-box {
+      width: 30px;
+      position: relative;
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+      display: none; }
+      .menu .cards .card .caption-check-box i {
+        font-size: 24px;
+        color: #fff; }
+    .menu .cards .card:hover hgroup {
+      flex: 0 0 90%;
+      transform: scaleY(1); }
+    .menu .cards .card:hover .caption-check-box {
+      display: block;
+      flex: 0 0 10%;
+      background-color: #99e2d0;
+      animation: caption-check-box ease 0.3s;
+      animation-iteration-count: 1;
+      transform-origin: 50% 50%;
+      animation-fill-mode: forwards;
+      overflow: hidden; }
+      .menu .cards .card:hover .caption-check-box i {
+        position: absolute;
+        top: 30%;
+        left: 30%; }
+@keyframes caption-check-box {
+  0% {
+    opacity: 0;
+    transform: translate(30px, 0px); }
+  60% {
+    opacity: 1;
+    transform: translate(5px, 0px); }
+  80% {
+    transform: translate(-10px, 0px); }
+  100% {
+    opacity: 1;
+    transform: translate(0px, 0px); } }
+    .menu .cards .card .price {
+      float: right;
+      font-weight: bold;
+      font-size: 1.125rem; }
 .menu .button1 button {
   background: linear-gradient(#ff79da, #9356dc);
   color: #fff;
@@ -319,6 +377,6 @@ footer {
   footer .footer-icon i {
     min-width: 30px; }
   footer a {
-    color: #fff !important; }
+    color: #fff; }
 
 /*# sourceMappingURL=style.css.map */
