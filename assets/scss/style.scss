@@ -51,14 +51,15 @@ body {
   line-height: 1.5;
   text-align: left;
   background-color: white;
+  color: #333;
 }
 
 a {
   color: #333;
-}
 
-a:visited {
-  color: inherit;
+  &:visited {
+    color: inherit;
+  }
 }
 
 h1 {
@@ -85,6 +86,7 @@ h3 {
   font-weight: bold;
 }
 
+//Helper class
 .bg-grey {
   background-color: $grey-color;
 }
@@ -106,6 +108,7 @@ h3 {
   transition: all 0.2s;
 }
 
+//Header section
 header {
   display: flex;
   max-width: 1680px;
@@ -114,7 +117,6 @@ header {
   flex-direction: column;
   align-items: center;
   position: relative;
-  z-index: -1;
 
   .header-left {
     width: 375px;
@@ -147,9 +149,9 @@ header {
   }
 
   .cover-img {
-    height: 350px;
+    height: 270px;
     width: 100%;
-
+    z-index: -1;
 
     img {
       height: 100%;
@@ -159,17 +161,21 @@ header {
   }
 }
 
+//Main section
 main {
   max-width: 1680px;
   margin-left: auto;
   margin-right: auto;
   display: flex;
   flex-wrap: wrap;
+
+}
+
+.menu main {
   z-index: 999;
   margin-top: -40px;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
-
 }
 
 .reserve {
@@ -193,6 +199,13 @@ main {
     padding: 15px;
     font-weight: bold;
     box-shadow: 2px 2px 10px 2px #e0e0e0;
+    cursor: pointer;
+    border: none;
+
+    &:hover{
+      box-shadow: 2px 2px 10px 2px #bcbcbc;
+      background: linear-gradient(lighten($secondary,5), lighten($primary,5));
+    }
 
   }
 }
@@ -254,7 +267,7 @@ aside {
     }
 
     .link-text {
-      font-weight: 900;
+      font-weight: bold;
     }
 
     &.active {
@@ -265,10 +278,10 @@ aside {
         color: $primary;
       }
     }
-
   }
 }
 
+//Cards css
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -279,11 +292,13 @@ aside {
   padding: 15px;
   height: 100%;
 
+  //Title cards section
   h1 {
     margin: 15px 0 15px 15px;
     width: 100%;
   }
 
+  //One card css
   .card {
     position: relative;
     display: flex;
@@ -295,6 +310,7 @@ aside {
     flex: 1 0 0%;
     margin: 15px;
 
+    //Imaged card
     &.card-img {
       border-radius: 15px;
 
@@ -344,6 +360,7 @@ aside {
       font-weight: normal;
     }
 
+    //Like button (heart)
     .like {
       position: relative;
 
@@ -382,6 +399,45 @@ aside {
 
 //Menu cards CSS
 .menu {
+  .restaurant-title {
+    width: 100%;
+    position: relative;
+
+    .like {
+      position: absolute;
+      right: 30px;
+      top: 25px;
+
+      .hover-icon {
+        display: none;
+      }
+
+      i {
+        font-size: 24px;
+        color: #888888;
+        left: 50%;
+      }
+
+      &:hover {
+        overflow: hidden;
+        cursor: pointer;
+
+        .default-icon {
+          opacity: 0;
+          display: none;
+          transition: all 0.5s 0s ease;
+        }
+
+        .hover-icon {
+          opacity: 1;
+          display: unset;
+          transition: all 0.5s 0s ease;
+          color: $primary;
+        }
+      }
+    }
+  }
+
   .cards {
     background-color: transparent;
     flex-flow: row wrap;
@@ -398,7 +454,7 @@ aside {
         border-bottom: 2px solid #99e2d0;
         content: "";
         display: block;
-        width: 10%;
+        width: 40px;
         padding-top: 3px;
       }
     }
@@ -409,10 +465,12 @@ aside {
       cursor: pointer;
       display: flex;
       flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: nowrap;
 
       hgroup {
         padding: 10px;
-        flex: 0 0 100%;
+        flex: 1 0 0%;
       }
 
       h1 {
@@ -423,12 +481,13 @@ aside {
       h2 {
         font-size: 1rem;
         font-weight: normal;
-        display: inline-block;
         color: gray;
+        text-overflow: ellipsis;
+        white-space: normal;
+        overflow: hidden;
       }
 
       .caption-check-box {
-        width: 30px;
         position: relative;
         border-top-right-radius: 15px;
         border-bottom-right-radius: 15px;
@@ -440,65 +499,14 @@ aside {
         }
       }
 
-      //.caption-check-box {
-      //  animation: caption-check-box ease 0.3s;
-      //  animation-iteration-count: 1;
-      //  transform-origin: 50% 50%;
-      //  animation-fill-mode: forwards;
-      //  overflow: hidden;
-      //}
-
-
-
-
-      &:hover {
-        hgroup {
-          flex: 0 0 90%;
-          transform: scaleY(1);
-        }
-
-        .caption-check-box {
-          display: block;
-          flex: 0 0 10%;
-          background-color: $tertiary;
-
-          animation: caption-check-box ease 0.3s;
-          animation-iteration-count: 1;
-          transform-origin: 50% 50%;
-          animation-fill-mode: forwards;
-          overflow: hidden;
-
-
-          i {
-            position: absolute;
-            top: 30%;
-            left: 30%;
-          }
-
-          @keyframes caption-check-box {
-            0% {
-              opacity: 0;
-              transform: translate(30px, 0px);
-            }
-            60% {
-              opacity: 1;
-              transform: translate(5px, 0px);
-            }
-            80% {
-              transform: translate(-10px, 0px);
-            }
-            100% {
-              opacity: 1;
-              transform: translate(0px, 0px);
-            }
-          }
-        }
-      }
-
       .price {
-        float: right;
         font-weight: bold;
         font-size: 1.125rem;
+        flex: 0 0 auto;
+        text-align: right;
+        padding-right: 10px;
+        display: flex;
+        align-items: center;
       }
     }
   }
@@ -507,7 +515,7 @@ aside {
     background: linear-gradient($secondary, $primary);
     color: #fff;
     border-radius: 25px;
-    padding: 15px;
+    padding: 15px 30px;
     font-weight: bold;
     box-shadow: 2px 2px 10px 2px #e0e0e0;
   }
@@ -552,6 +560,6 @@ footer {
   }
 
   a {
-    color: #fff;
+    color: #fff !important;
   }
 }
