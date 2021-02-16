@@ -7,6 +7,11 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   vertical-align: baseline;
   text-decoration: none; }
 
+*:focus {
+  outline-style: none;
+  box-shadow: none;
+  border-color: transparent; }
+
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
@@ -105,10 +110,12 @@ header {
     header .search-location .icon-wrapper {
       padding: 8px 10px; }
     header .search-location .input-field {
-      padding: 8px 10px; }
+      flex: 1 0 0%; }
       header .search-location .input-field input {
         border: none;
-        background-color: transparent; }
+        background-color: transparent;
+        padding: 15px 10px;
+        width: 100%; }
   header .back-btn {
     position: absolute;
     left: 20px;
@@ -145,6 +152,8 @@ main {
   .reserve h2 {
     color: #888;
     font-weight: normal; }
+  .reserve hgroup {
+    margin-bottom: 20px; }
   .reserve button {
     background: linear-gradient(#ff79da, #9356dc);
     color: #fff;
