@@ -1,4 +1,4 @@
-main.menu .cards .card:hover .caption-check-box {
+.menu main .cards .card:hover .caption-check-box {
   display: block;
   flex: 0 0 15%;
   background-color: #99e2d0;
@@ -7,7 +7,7 @@ main.menu .cards .card:hover .caption-check-box {
   transform-origin: 50% 50%;
   animation-fill-mode: forwards;
   overflow: hidden; }
-  main.menu .cards .card:hover .caption-check-box i {
+  .menu main .cards .card:hover .caption-check-box i {
     position: absolute;
     top: 30%;
     left: 30%; }
