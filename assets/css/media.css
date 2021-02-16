@@ -35,15 +35,15 @@
     header .cover-img {
       z-index: -1; }
 
-  main.menu {
+  .menu main {
     border-top-left-radius: 35px;
     border-top-right-radius: 35px;
     z-index: 999;
     margin-top: -50px; }
-    main.menu h1.shrikhand {
+    .menu main h1.shrikhand {
       padding: 30px 10px 20px 15px;
       font-size: 1.5rem; }
-    main.menu .cards .card {
+    .menu main .cards .card {
       margin: 10px 0;
       border-radius: 15px;
       cursor: pointer;
