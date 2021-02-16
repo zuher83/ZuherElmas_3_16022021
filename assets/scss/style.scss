@@ -132,11 +132,13 @@ header {
     }
 
     .input-field {
-      padding: 8px 10px;
+      flex: 1 0 0%;
 
       input {
         border: none;
         background-color: transparent;
+        padding: 15px 10px;
+        width: 100%;
       }
     }
   }
