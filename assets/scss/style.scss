@@ -88,6 +88,10 @@ h3 {
   background-color: $grey-color;
 }
 
+.full-width {
+  width: 100%;
+}
+
 .button1 button {
   display: inline-block;
   padding: 0.35em 1.2em;
@@ -128,6 +132,13 @@ header {
       input {
         border: none;
         background-color: transparent;
+      }
+    }
+  }
+  .cover-img {
+    .cover-img {
+      img {
+        object-fit: cover;
       }
     }
   }
@@ -344,6 +355,38 @@ aside {
         }
       }
 
+    }
+  }
+}
+
+
+
+//Menu cards CSS
+.menu {
+  .cards {
+    .card {
+      margin: 15px 0;
+      border-radius: 15px;
+
+      hgroup {
+        padding: 10px;
+      }
+
+      h1 {
+        font-size: 1.125rem;
+        margin: 0 0 5px 0;
+      }
+      h2 {
+        font-size: 1rem;
+        font-weight: normal;
+        display: inline-block;
+        color: gray;
+      }
+      .price {
+        float: right;
+        font-weight: bold;
+        font-size: 1.125rem;
+      }
     }
   }
 }

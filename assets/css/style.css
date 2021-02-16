@@ -72,6 +72,9 @@ h3 {
 .bg-grey {
   background-color: #f6f6f6; }
 
+.full-width {
+  width: 100%; }
+
 .button1 button {
   display: inline-block;
   padding: 0.35em 1.2em;
@@ -104,6 +107,8 @@ header {
       header .search-location .input-field input {
         border: none;
         background-color: transparent; }
+  header .cover-img .cover-img img {
+    object-fit: cover; }
 
 main {
   max-width: 1680px;
@@ -253,6 +258,24 @@ aside {
           display: unset;
           transition: all 0.5s 0s ease;
           color: #9356dc; }
+
+.menu .cards .card {
+  margin: 15px 0;
+  border-radius: 15px; }
+  .menu .cards .card hgroup {
+    padding: 10px; }
+  .menu .cards .card h1 {
+    font-size: 1.125rem;
+    margin: 0 0 5px 0; }
+  .menu .cards .card h2 {
+    font-size: 1rem;
+    font-weight: normal;
+    display: inline-block;
+    color: gray; }
+  .menu .cards .card .price {
+    float: right;
+    font-weight: bold;
+    font-size: 1.125rem; }
 
 footer {
   padding: 20px;
