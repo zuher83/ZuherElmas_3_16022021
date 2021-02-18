@@ -9,7 +9,9 @@
     flex-flow: column; }
     .cards > .card {
       margin-bottom: 15px;
-      flex: 1 0 33%; } }
+      flex: 1 0 33%; }
+      .cards > .card hgroup {
+        display: grid; } }
 @media screen and (max-width: 768px) {
   aside .select {
     flex-flow: column;
@@ -21,7 +23,9 @@
     flex-flow: column; }
     .cards > .card {
       margin-bottom: 15px;
-      flex: 1 0 33%; } }
+      flex: 1 0 33%; }
+      .cards > .card hgroup {
+        display: grid; } }
 @media all and (max-width: 576px) {
   header {
     flex-flow: column; }
