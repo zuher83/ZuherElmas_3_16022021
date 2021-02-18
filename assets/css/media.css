@@ -57,6 +57,8 @@
       cursor: pointer;
       display: flex;
       flex-direction: row; }
+      .menu main .cards .card hgroup {
+        display: grid; }
 
   aside .select {
     display: flex;

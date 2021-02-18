@@ -87,6 +87,10 @@
           cursor: pointer;
           display: flex;
           flex-direction: row;
+
+          hgroup {
+            display: grid;
+          }
         }
       }
     }

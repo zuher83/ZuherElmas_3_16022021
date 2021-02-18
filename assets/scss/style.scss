@@ -8,9 +8,10 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   font-size: 16px;
   vertical-align: baseline;
   text-decoration: none;
+  outline-style: none;
 }
 
-*:focus {
+*:focus, *:visited, *:focus-within, *:focus-visible {
   outline-style: none;
   box-shadow: none;
   border-color: transparent;
@@ -120,7 +121,7 @@ h3 {
   transform: scale(1);
 
   &:hover {
-    box-shadow: 2px 2px 10px 2px #bcbcbc;
+    box-shadow: $btn1-shadow-hover;
     background: linear-gradient(lighten($secondary, 5), lighten($primary, 5));
     transform: scale(1.05);
   }
@@ -139,6 +140,7 @@ header {
   flex-direction: column;
   align-items: center;
   position: relative;
+  padding-top: 10px;
 
   .header-left {
     width: 375px;
@@ -209,6 +211,7 @@ main {
 
   h1 {
     font-weight: bold;
+    margin-bottom: 15px;
   }
 
   h2 {
@@ -226,11 +229,11 @@ main {
 aside {
   padding: 30px 10px;
   flex: 0 0 100%;
-  //display: flex;
-  //flex-wrap: wrap;
 
   h1 {
     width: 100%;
+    margin-bottom: 10px;
+    margin-left: 5px;
   }
 
   .select {
@@ -251,7 +254,7 @@ aside {
     margin-right: 15px;
     margin-left: 15px;
     border-radius: 30px;
-    box-shadow: 2px 2px 10px 2px #e0e0e0;
+    box-shadow: $btn1-shadow;
     position: relative;
 
 
@@ -409,6 +412,9 @@ aside {
   }
 }
 
+.home .card {
+  flex: 1 0 0%;
+}
 
 //Menu cards CSS
 .menu {
@@ -463,7 +469,7 @@ aside {
       font-weight: normal;
       width: 100%;
 
-      &:after {
+      &::after {
         border-bottom: 2px solid #99e2d0;
         content: "";
         display: block;

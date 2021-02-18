@@ -5,9 +5,10 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   font: inherit;
   font-size: 16px;
   vertical-align: baseline;
-  text-decoration: none; }
+  text-decoration: none;
+  outline-style: none; }
 
-*:focus {
+*:focus, *:visited, *:focus-within, *:focus-visible {
   outline-style: none;
   box-shadow: none;
   border-color: transparent; }
@@ -99,7 +100,7 @@ h3 {
   border: none;
   transform: scale(1); }
   .button1:hover {
-    box-shadow: 2px 2px 10px 2px #bcbcbc;
+    box-shadow: 0px 5px 15px 0px #c3c3c3;
     background: linear-gradient(#ff93e1, #a16be0);
     transform: scale(1.05); }
 
@@ -113,7 +114,8 @@ header {
   flex-flow: wrap;
   flex-direction: column;
   align-items: center;
-  position: relative; }
+  position: relative;
+  padding-top: 10px; }
   header .header-left {
     width: 375px; }
   header .search-location {
@@ -161,7 +163,8 @@ main {
   padding: 30px 10px;
   flex: 0 0 100%; }
   .reserve h1 {
-    font-weight: bold; }
+    font-weight: bold;
+    margin-bottom: 15px; }
   .reserve h2 {
     color: #888;
     font-weight: normal; }
@@ -172,7 +175,9 @@ aside {
   padding: 30px 10px;
   flex: 0 0 100%; }
   aside h1 {
-    width: 100%; }
+    width: 100%;
+    margin-bottom: 10px;
+    margin-left: 5px; }
   aside .select {
     display: flex;
     flex-flow: nowrap;
@@ -189,7 +194,7 @@ aside {
     margin-right: 15px;
     margin-left: 15px;
     border-radius: 30px;
-    box-shadow: 2px 2px 10px 2px #e0e0e0;
+    box-shadow: 0px 5px 15px 0px #d0d0d0;
     position: relative; }
     aside .step-button .circle-number {
       background-color: #9356dc;
@@ -292,6 +297,9 @@ aside {
           transition: all 0.5s 0s ease;
           color: #9356dc; }
 
+.home .card {
+  flex: 1 0 0%; }
+
 .menu .restaurant-title {
   width: 100%;
   position: relative; }
@@ -326,7 +334,7 @@ aside {
     font-size: 1rem;
     font-weight: normal;
     width: 100%; }
-    .menu .cards h2.sub-title:after {
+    .menu .cards h2.sub-title::after {
       border-bottom: 2px solid #99e2d0;
       content: "";
       display: block;
@@ -380,7 +388,7 @@ aside {
   border: none;
   padding: 15px 30px;
   font-weight: bold;
-  box-shadow: 2px 2px 10px 2px #e0e0e0; }
+  box-shadow: 0px 5px 15px 0px #d0d0d0; }
 .menu .order {
   text-align: center;
   margin-bottom: 20px; }
