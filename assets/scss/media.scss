@@ -30,6 +30,10 @@
     > .card {
       margin-bottom: 15px;
       flex: 1 0 33%;
+
+      hgroup {
+        display: grid;
+      }
     }
   }
 
