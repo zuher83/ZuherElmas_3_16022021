@@ -4,6 +4,16 @@
     flex-flow: column;
     flex-direction: column;
   }
+  .cards {
+    margin-right: 0;
+    margin-left: 0;
+    flex-flow: column;
+
+    > .card {
+      margin-bottom: 15px;
+      flex: 1 0 33%;
+    }
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -19,7 +29,7 @@
 
     > .card {
       margin-bottom: 15px;
-      flex: 1 0 0%;
+      flex: 1 0 33%;
     }
   }
 

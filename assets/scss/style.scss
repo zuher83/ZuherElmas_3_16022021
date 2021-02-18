@@ -76,6 +76,7 @@ h1 {
   &.shrikhand {
     font-family: Shrikhand, sans-serif;
     padding: 20px 0 20px 20px;
+    font-weight: normal;
   }
 }
 
@@ -103,21 +104,36 @@ h3 {
 
 .button1 {
   display: inline-block;
-  padding: 0.35em 1.2em;
-  border: 0.1em solid #FFFFFF;
+  padding: $btn-padding;
   margin: 0 0.3em 0.3em 0;
-  border-radius: 0.12em;
+  border-radius: 25px;
   box-sizing: border-box;
   text-decoration: none;
-  font-weight: 300;
   text-align: center;
   transition: all 0.2s;
+  background: $btn1-color;
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 2px 2px 10px 2px #e0e0e0;
+  cursor: pointer;
+  border: none;
+  transform: scale(1);
+
+  &:hover {
+    box-shadow: 2px 2px 10px 2px #bcbcbc;
+    background: linear-gradient(lighten($secondary, 5), lighten($primary, 5));
+    transform: scale(1.05);
+  }
+
 }
 
+a.button1 {
+  color: #fff;
+}
 //Header section
 header {
   display: flex;
-  max-width: 1680px;
+  max-width: $wrapper;
   margin: auto;
   flex-flow: wrap;
   flex-direction: column;
@@ -171,7 +187,7 @@ header {
 
 //Main section
 main {
-  max-width: 1680px;
+  max-width: $wrapper;
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -204,29 +220,14 @@ main {
     margin-bottom: 20px;
   }
 
-  .button1 {
-    background: linear-gradient($secondary, $primary);
-    color: #fff;
-    border-radius: 25px;
-    padding: 15px;
-    font-weight: bold;
-    box-shadow: 2px 2px 10px 2px #e0e0e0;
-    cursor: pointer;
-    border: none;
 
-    &:hover{
-      box-shadow: 2px 2px 10px 2px #bcbcbc;
-      background: linear-gradient(lighten($secondary,5), lighten($primary,5));
-    }
-
-  }
 }
 
 aside {
   padding: 30px 10px;
   flex: 0 0 100%;
-  display: flex;
-  flex-wrap: wrap;
+  //display: flex;
+  //flex-wrap: wrap;
 
   h1 {
     width: 100%;
@@ -282,9 +283,9 @@ aside {
       font-weight: bold;
     }
 
-    &.active {
+    &:hover {
       background-color: lighten($primary, 35%);
-      box-shadow: 2px 2px 10px 2px lighten($primary, 35%);
+      box-shadow: 2px 2px 10px 2px lighten($primary, 30%);
 
       .icon {
         color: $primary;
@@ -319,7 +320,7 @@ aside {
     word-wrap: break-word;
     background-color: white;
     box-shadow: 2px 2px 10px 2px #e0e0e0;
-    flex: 1 0 0%;
+    flex: 1 0 25%;
     margin: 15px;
 
     //Imaged card
@@ -472,30 +473,34 @@ aside {
     }
 
     .card {
-      //margin: 10px 0;
       border-radius: 15px;
       cursor: pointer;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       flex-wrap: nowrap;
+      overflow: hidden;
+
 
       hgroup {
         padding: 10px;
         flex: 1 0 0%;
       }
 
-      h1 {
+      h2 {
         font-size: 1.125rem;
         margin: 0 0 5px 0;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
       }
 
-      h2 {
+      h3 {
         font-size: 1rem;
         font-weight: normal;
         color: gray;
         text-overflow: ellipsis;
-        white-space: normal;
+        white-space: nowrap;
         overflow: hidden;
       }
 
@@ -508,6 +513,7 @@ aside {
         i {
           font-size: 24px;
           color: #fff;
+          transform: rotate(360deg);
         }
       }
 
@@ -524,12 +530,13 @@ aside {
   }
 
   .button1 {
-    background: linear-gradient($secondary, $primary);
+    background: $btn1-color;
     color: #fff;
     border-radius: 25px;
+    border: none;
     padding: 15px 30px;
     font-weight: bold;
-    box-shadow: 2px 2px 10px 2px #e0e0e0;
+    box-shadow: $btn1-shadow;
   }
 
   //Order button
