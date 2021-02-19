@@ -1,20 +1,23 @@
 @media screen and (max-width: 1024px) {
-  //todo ipad pro fix
-  aside .select {
-    flex-flow: column;
-    flex-direction: column;
-  }
-  .cards {
-    margin-right: 0;
-    margin-left: 0;
-    flex-flow: column;
-
-    > .card {
-      margin-bottom: 15px;
+  .home {
+    .card {
       flex: 1 0 33%;
+    }
+  }
 
-      hgroup {
-        display: grid;
+  .menu {
+    .cards {
+      margin-right: 0;
+      margin-left: 0;
+      flex-flow: column;
+
+      > .card {
+        margin-bottom: 15px;
+        flex: 1 0 33%;
+
+        //hgroup {
+        //  display: grid;
+        //}
       }
     }
   }
@@ -35,12 +38,11 @@
       margin-bottom: 15px;
       flex: 1 0 33%;
 
-      hgroup {
-        display: grid;
-      }
+      //hgroup {
+      //  display: grid;
+      //}
     }
   }
-
 }
 
 
@@ -76,6 +78,17 @@
     }
   }
 
+  .cards {
+    margin-right: 0;
+    margin-left: 0;
+    flex-flow: column;
+
+    > .card {
+      margin-bottom: 15px;
+      flex: 1 0 100%;
+    }
+  }
+
   .menu {
     main {
       border-top-left-radius: 35px;
@@ -96,9 +109,9 @@
           display: flex;
           flex-direction: row;
 
-          hgroup {
-            display: grid;
-          }
+          //hgroup {
+          //  display: grid;
+          //}
         }
       }
     }
@@ -121,23 +134,14 @@
     }
   }
 
-  .cards {
-    margin-right: 0;
-    margin-left: 0;
-    flex-flow: column;
-
-    > .card {
-      margin-bottom: 15px;
-      flex: 1 0 100%;
-    }
-  }
-
-
   footer {
     text-align: left;
 
     .logo {
       width: 150px;
+      img {
+        max-width: 150px;
+      }
     }
   }
 }

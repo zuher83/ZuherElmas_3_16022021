@@ -8,7 +8,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   text-decoration: none;
   outline-style: none; }
 
-*:focus, *:visited, *:focus-within, *:focus-visible {
+*:focus, *:visited, *:focus-within, *:focus-visible, *:hover {
   outline-style: none;
   box-shadow: none;
   border-color: transparent; }
@@ -57,26 +57,6 @@ a {
   a:visited {
     color: inherit; }
 
-h1 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  line-height: 1; }
-  h1.shrikhand {
-    font-family: Shrikhand, sans-serif;
-    padding: 20px 0 20px 20px;
-    font-weight: normal; }
-
-h2 {
-  display: block;
-  font-size: 1.25rem;
-  font-weight: bold;
-  margin: 0;
-  line-height: 1.2; }
-
-h3 {
-  font-size: 0.875rem;
-  font-weight: bold; }
-
 .bg-grey {
   background-color: #f6f6f6; }
 
@@ -97,15 +77,33 @@ h3 {
   font-weight: bold;
   box-shadow: 2px 2px 10px 2px #e0e0e0;
   cursor: pointer;
-  border: none;
-  transform: scale(1); }
+  border: none; }
   .button1:hover {
-    box-shadow: 0px 5px 15px 0px #c3c3c3;
-    background: linear-gradient(#ff93e1, #a16be0);
-    transform: scale(1.05); }
+    box-shadow: 0px 5px 15px 0px #9d9d9d;
+    background: linear-gradient(#ff93e1, #a16be0); }
 
 a.button1 {
   color: #fff; }
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1; }
+  h1.shrikhand {
+    font-family: Shrikhand, sans-serif;
+    padding: 20px 0 20px 20px;
+    font-weight: normal; }
+
+h2 {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 0;
+  line-height: 1.2; }
+
+h3 {
+  font-size: 0.875rem;
+  font-weight: bold; }
 
 header {
   display: flex;
@@ -121,7 +119,8 @@ header {
   header .search-location {
     display: flex;
     background-color: #eaeaea;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    border-top: 2px solid #e0e0e0; }
     header .search-location .icon-wrapper {
       padding: 8px 10px; }
     header .search-location .input-field {
@@ -131,10 +130,12 @@ header {
         background-color: transparent;
         padding: 15px 10px;
         width: 100%; }
+        header .search-location .input-field input[type="text"]::placeholder {
+          font-size: 1rem; }
   header .back-btn {
     position: absolute;
     left: 20px;
-    top: 20px;
+    top: 30px;
     display: block; }
   header .cover-img {
     height: 270px;
@@ -163,7 +164,6 @@ main {
   padding: 30px 10px;
   flex: 0 0 100%; }
   .reserve h1 {
-    font-weight: bold;
     margin-bottom: 15px; }
   .reserve h2 {
     color: #888;
@@ -194,7 +194,7 @@ aside {
     margin-right: 15px;
     margin-left: 15px;
     border-radius: 30px;
-    box-shadow: 0px 5px 15px 0px #d0d0d0;
+    box-shadow: 0px 5px 15px 0px #b6b6b6;
     position: relative; }
     aside .step-button .circle-number {
       background-color: #9356dc;
@@ -226,7 +226,6 @@ aside {
   display: flex;
   flex-wrap: wrap;
   flex-flow: row wrap;
-  background-color: #f2f2f2;
   margin-right: -15px;
   margin-left: -15px;
   padding: 15px;
@@ -306,7 +305,7 @@ aside {
   .menu .restaurant-title .like {
     position: absolute;
     right: 30px;
-    top: 25px; }
+    top: 30px; }
     .menu .restaurant-title .like .hover-icon {
       display: none; }
     .menu .restaurant-title .like i {
@@ -350,7 +349,10 @@ aside {
     overflow: hidden; }
     .menu .cards .card hgroup {
       padding: 10px;
-      flex: 1 0 0%; }
+      flex: 1;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden; }
     .menu .cards .card h2 {
       font-size: 1.125rem;
       margin: 0 0 5px 0;
@@ -376,19 +378,11 @@ aside {
     .menu .cards .card .price {
       font-weight: bold;
       font-size: 1.125rem;
-      flex: 0 0 auto;
       text-align: right;
       padding-right: 10px;
       display: flex;
-      align-items: center; }
-.menu .button1 {
-  background: linear-gradient(#ff79da, #9356dc);
-  color: #fff;
-  border-radius: 25px;
-  border: none;
-  padding: 15px 30px;
-  font-weight: bold;
-  box-shadow: 0px 5px 15px 0px #d0d0d0; }
+      align-items: center;
+      justify-content: flex-end; }
 .menu .order {
   text-align: center;
   margin-bottom: 20px; }
@@ -411,5 +405,160 @@ footer {
     min-width: 30px; }
   footer a {
     color: #fff !important; }
+
+@keyframes check-box {
+  0% {
+    transform: rotate(-90deg); }
+  40% {
+    transform: rotate(-55deg); }
+  70% {
+    transform: rotate(-30deg); }
+  100% {
+    transform: rotate(5deg); } }
+@keyframes caption-check-box {
+  0% {
+    opacity: 0.4;
+    transform: translate(15px, 0px); }
+  40% {
+    opacity: 0.6;
+    transform: translate(10px, 0px); }
+  70% {
+    opacity: 0.8;
+    transform: translate(6px, 0px); }
+  100% {
+    opacity: 1;
+    transform: translate(1px, 0px); } }
+@keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@keyframes loadspinner {
+  100% {
+    opacity: 0;
+    z-index: -10; } }
+@-webkit-keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+    background: #fface8; }
+  50% {
+    transform: rotate(180deg);
+    background: #ff79da; }
+  100% {
+    transform: rotate(360deg);
+    background: #fface8; } }
+.menu main .cards .card:hover hgroup {
+  flex: 1;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden; }
+.menu main .cards .card:hover .price {
+  min-width: 50px; }
+.menu main .cards .card:hover .caption-check-box {
+  display: block;
+  flex: 0 0 15%;
+  background-color: #99e2d0;
+  animation: caption-check-box ease 0.3s;
+  animation-iteration-count: 1;
+  transform-origin: 50% 50%;
+  animation-fill-mode: forwards;
+  overflow: hidden; }
+  .menu main .cards .card:hover .caption-check-box i {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    animation-iteration-count: 1;
+    animation: check-box ease 0.25s; }
+
+.fade-1 {
+  animation: fadein 0.3s; }
+
+.fade-2 {
+  animation: fadein 0.6s; }
+
+.fade-3 {
+  animation: fadein 0.9s; }
+
+.fade-4 {
+  animation: fadein 1.2s; }
+
+.fade-5 {
+  animation: fadein 1.5s; }
+
+.fade-6 {
+  animation: fadein 1.8s; }
+
+.fade-7 {
+  animation: fadein 2.1s; }
+
+.fade-8 {
+  animation: fadein 2.4s; }
+
+.fade-9 {
+  animation: fadein 2.7s; }
+
+.fade-10 {
+  animation: fadein 3s; }
+
+.fade-11 {
+  animation: fadein 3.3s; }
+
+.fade-12 {
+  animation: fadein 3.6s; }
+
+.fade-13 {
+  animation: fadein 3.9s; }
+
+.fade-14 {
+  animation: fadein 4.2s; }
+
+.fade-15 {
+  animation: fadein 4.5s; }
+
+.loadspinner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  background-color: rgba(10, 10, 10, 0.6);
+  animation: loadspinner 2s;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+  z-index: 999; }
+  .loadspinner:before {
+    content: "";
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle; }
+  .loadspinner .spinner-wrapper {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    border: 5px solid #fff;
+    padding: 10px; }
+    .loadspinner .spinner-wrapper .spinner-cover {
+      background: #fff;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      position: relative;
+      z-index: 2; }
+    .loadspinner .spinner-wrapper .spinner-bar {
+      background: #ff79da;
+      width: 50%;
+      height: 50%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 100% 0 0 0;
+      -webkit-animation: spinner 2s linear infinite;
+      transform-origin: 100% 100%;
+      animation: spinner 2s linear infinite; }
 
 /*# sourceMappingURL=style.css.map */

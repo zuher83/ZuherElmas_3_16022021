@@ -1,17 +1,14 @@
 @media screen and (max-width: 1024px) {
-  aside .select {
-    flex-flow: column;
-    flex-direction: column; }
+  .home .card {
+    flex: 1 0 33%; }
 
-  .cards {
+  .menu .cards {
     margin-right: 0;
     margin-left: 0;
     flex-flow: column; }
-    .cards > .card {
+    .menu .cards > .card {
       margin-bottom: 15px;
-      flex: 1 0 33%; }
-      .cards > .card hgroup {
-        display: grid; } }
+      flex: 1 0 33%; } }
 @media screen and (max-width: 768px) {
   aside .select {
     flex-flow: column;
@@ -23,9 +20,7 @@
     flex-flow: column; }
     .cards > .card {
       margin-bottom: 15px;
-      flex: 1 0 33%; }
-      .cards > .card hgroup {
-        display: grid; } }
+      flex: 1 0 33%; } }
 @media all and (max-width: 576px) {
   header {
     flex-flow: column; }
@@ -47,6 +42,14 @@
     header .cover-img {
       z-index: -1; }
 
+  .cards {
+    margin-right: 0;
+    margin-left: 0;
+    flex-flow: column; }
+    .cards > .card {
+      margin-bottom: 15px;
+      flex: 1 0 100%; }
+
   .menu main {
     border-top-left-radius: 35px;
     border-top-right-radius: 35px;
@@ -61,8 +64,6 @@
       cursor: pointer;
       display: flex;
       flex-direction: row; }
-      .menu main .cards .card hgroup {
-        display: grid; }
 
   aside .select {
     display: flex;
@@ -75,17 +76,11 @@
     margin-right: 0;
     margin-left: 0; }
 
-  .cards {
-    margin-right: 0;
-    margin-left: 0;
-    flex-flow: column; }
-    .cards > .card {
-      margin-bottom: 15px;
-      flex: 1 0 100%; }
-
   footer {
     text-align: left; }
     footer .logo {
-      width: 150px; } }
+      width: 150px; }
+      footer .logo img {
+        max-width: 150px; } }
 
 /*# sourceMappingURL=media.css.map */
