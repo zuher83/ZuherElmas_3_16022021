@@ -48,7 +48,7 @@
     flex-flow: column; }
     .cards > .card {
       margin-bottom: 15px;
-      flex: 1 0 100%; }
+      flex: 1 0 0%; }
 
   .menu main {
     border-top-left-radius: 35px;
