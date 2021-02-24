@@ -1,15 +1,18 @@
-@import "_variables";
+@import 'variables';
 
 @keyframes check-box {
   0% {
     transform: rotate(-90deg);
   }
+
   40% {
     transform: rotate(-55deg);
   }
+
   70% {
     transform: rotate(-30deg);
   }
+
   100% {
     transform: rotate(5deg);
   }
@@ -17,20 +20,23 @@
 
 @keyframes caption-check-box {
   0% {
-    opacity: 0.4;
-    transform: translate(15px, 0px);
+    opacity: .4;
+    transform: translate(15px, 0);
   }
+
   40% {
-    opacity: 0.6;
-    transform: translate(10px, 0px);
+    opacity: .6;
+    transform: translate(10px, 0);
   }
+
   70% {
-    opacity: 0.8;
-    transform: translate(6px, 0px);
+    opacity: .8;
+    transform: translate(6px, 0);
   }
+
   100% {
     opacity: 1;
-    transform: translate(1px, 0px);
+    transform: translate(1px, 0);
   }
 }
 
@@ -38,6 +44,7 @@
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -50,18 +57,20 @@
   }
 }
 
-@-webkit-keyframes spinner {
+@keyframes spinner {
   0% {
+    background: lighten($secondary, 10);
     transform: rotate(0deg);
-    background: lighten($secondary, 10);
   }
+
   50% {
-    transform: rotate(180deg);
     background: $secondary;
+    transform: rotate(180deg);
   }
+
   100% {
-    transform: rotate(360deg);
     background: lighten($secondary, 10);
+    transform: rotate(360deg);
   }
 }
 
