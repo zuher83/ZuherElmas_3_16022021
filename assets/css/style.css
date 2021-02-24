@@ -1,4 +1,84 @@
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -64,23 +144,23 @@ a {
   width: 100%; }
 
 .button1 {
-  display: inline-block;
-  padding: 15px 30px;
-  margin: 0 0.3em 0.3em 0;
-  border-radius: 25px;
-  box-sizing: border-box;
-  text-decoration: none;
-  text-align: center;
-  transition: all 0.2s;
   background: linear-gradient(#ff79da, #9356dc);
-  color: #fff;
-  font-weight: bold;
+  border: 0;
+  border-radius: 25px;
   box-shadow: 2px 2px 10px 2px #e0e0e0;
+  box-sizing: border-box;
+  color: #fff;
   cursor: pointer;
-  border: none; }
+  display: inline-block;
+  font-weight: bold;
+  margin: 0 .3em .3em 0;
+  padding: 15px 30px;
+  text-align: center;
+  text-decoration: none;
+  transition: all .2s; }
   .button1:hover {
-    box-shadow: 0px 5px 15px 0px #9d9d9d;
-    background: linear-gradient(#ff93e1, #a16be0); }
+    background: linear-gradient(#ff93e1, #a16be0);
+    box-shadow: 0px 5px 15px 0px #9d9d9d; }
 
 a.button1 {
   color: #fff; }
@@ -91,134 +171,134 @@ h1 {
   line-height: 1; }
   h1.shrikhand {
     font-family: Shrikhand, sans-serif;
-    padding: 20px 0 20px 20px;
-    font-weight: normal; }
+    font-weight: normal;
+    padding: 20px 0 20px 20px; }
 
 h2 {
   display: block;
   font-size: 1.25rem;
   font-weight: bold;
-  margin: 0;
-  line-height: 1.2; }
+  line-height: 1.2;
+  margin: 0; }
 
 h3 {
-  font-size: 0.875rem;
+  font-size: .875rem;
   font-weight: bold; }
 
 header {
-  display: flex;
-  max-width: 1440px;
-  margin: auto;
-  flex-flow: wrap;
-  flex-direction: column;
   align-items: center;
-  position: relative;
-  padding-top: 10px; }
+  display: flex;
+  flex-direction: column;
+  flex-flow: wrap;
+  margin: auto;
+  max-width: 1440px;
+  padding-top: 10px;
+  position: relative; }
   header .header-left {
-    width: 375px;
     background-color: #e9e9e9;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    width: 375px; }
   header .search-location {
-    display: flex;
-    border-top: 2px solid #e0e0e0; }
+    border-top: 2px solid #e0e0e0;
+    display: flex; }
     header .search-location .icon-wrapper {
       padding: 8px 10px; }
     header .search-location .input-field {
-      flex: 1 0 0%; }
+      flex: 1 0 0; }
       header .search-location .input-field input {
-        border: none;
         background-color: transparent;
+        border: 0;
         padding: 15px 10px;
         width: 100%; }
         header .search-location .input-field input[type="text"]::placeholder {
+          color: #333;
           font-size: 1rem;
-          font-weight: bold;
-          color: #333333; }
+          font-weight: bold; }
   header .back-btn {
-    position: absolute;
+    display: block;
     left: 20px;
-    top: 30px;
-    display: block; }
+    position: absolute;
+    top: 30px; }
   header .cover-img {
     height: 270px;
     width: 100%;
     z-index: -1; }
     header .cover-img img {
       height: 100%;
-      width: 100%;
-      object-fit: cover; }
+      object-fit: cover;
+      width: 100%; }
 
 main {
-  max-width: 1440px;
+  display: flex;
+  flex-wrap: wrap;
   margin-left: auto;
   margin-right: auto;
-  display: flex;
-  flex-wrap: wrap; }
+  max-width: 1440px; }
 
 .menu main {
-  z-index: 999;
-  margin-top: -40px;
   border-top-left-radius: 30px;
-  border-top-right-radius: 30px; }
+  border-top-right-radius: 30px;
+  margin-top: -40px;
+  z-index: 999; }
 
 .reserve {
-  text-align: center;
-  padding: 30px 10px;
   flex: 0 0 100%;
-  margin: 0 -15px; }
+  margin: 0 -15px;
+  padding: 30px 10px;
+  text-align: center; }
   .reserve h1 {
     margin-bottom: 15px;
     padding: 0 50px; }
   .reserve h2 {
     color: #888;
-    font-weight: normal;
-    font-size: 1.125rem; }
+    font-size: 1.125rem;
+    font-weight: normal; }
   .reserve hgroup {
     margin-bottom: 35px; }
   .reserve .button1 {
     margin-bottom: 30px; }
 
 aside {
-  padding: 30px 10px;
-  flex: 0 0 100%; }
+  flex: 0 0 100%;
+  padding: 30px 10px; }
   aside h1 {
-    width: 100%;
     margin-bottom: 10px;
-    margin-left: 5px; }
+    margin-left: 5px;
+    width: 100%; }
   aside .select {
+    align-content: space-between;
     display: flex;
-    flex-flow: nowrap;
     flex-direction: row;
+    flex-flow: nowrap;
     padding: 15px;
     position: relative;
-    align-content: space-between;
     width: 100%; }
   aside .step-button {
-    margin-bottom: 20px;
-    padding: 25px 15px;
     background-color: #f6f6f6;
-    flex: 1 0 auto;
-    margin-right: 15px;
-    margin-left: 15px;
     border-radius: 30px;
     box-shadow: 0px 5px 15px 0px #c3c3c3;
+    flex: 1 0 auto;
+    margin-bottom: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 25px 15px;
     position: relative; }
     aside .step-button .circle-number {
       background-color: #9356dc;
-      display: block;
-      position: absolute;
-      width: 25px;
-      height: 25px;
-      text-align: center;
       border-radius: 100%;
-      color: white;
+      color: #fff;
+      display: block;
       font-weight: bold;
+      height: 25px;
       left: -12px;
-      line-height: 1.67; }
+      line-height: 1.67;
+      position: absolute;
+      text-align: center;
+      width: 25px; }
     aside .step-button .icon {
+      display: inline-block;
       margin: 0 15px;
-      min-width: 30px;
-      display: inline-block; }
+      min-width: 30px; }
       aside .step-button .icon i {
         font-size: 20px; }
     aside .step-button .link-text {
@@ -230,43 +310,43 @@ aside {
         color: #9356dc; }
 
 .home main > section {
-  flex: 1 0 0%; }
+  flex: 1 0 0; }
 
 .cards {
   display: flex;
-  flex-wrap: wrap;
   flex-flow: row wrap;
-  margin-right: -15px;
+  flex-wrap: wrap;
+  height: 100%;
   margin-left: -15px;
-  padding: 15px;
-  height: 100%; }
+  margin-right: -15px;
+  padding: 15px; }
   .cards h1 {
     margin: 15px 0 15px 15px;
     width: 100%; }
   .cards .card {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-color: white;
+    background-color: #fff;
     box-shadow: 2px 2px 10px 2px #e0e0e0;
+    display: flex;
     flex: 1 0 25%;
-    margin: 15px; }
+    flex-direction: column;
+    margin: 15px;
+    min-width: 0;
+    position: relative;
+    word-wrap: break-word; }
     .cards .card.card-img {
       border-radius: 15px; }
       .cards .card.card-img .card-img-header {
-        position: relative;
-        max-height: 200px; }
+        max-height: 200px;
+        position: relative; }
         .cards .card.card-img .card-img-header .img-btn-left {
-          position: absolute;
-          z-index: 999;
           background-color: #99e2d0;
+          color: #2c9c81;
+          font-weight: bold;
+          padding: 3px 10px;
+          position: absolute;
           right: 10px;
           top: 10px;
-          padding: 3px 10px;
-          color: #2c9c81;
-          font-weight: bold; }
+          z-index: 999; }
       .cards .card.card-img img {
         border-top-left-radius: 1em;
         border-top-right-radius: 1em;
@@ -275,8 +355,8 @@ aside {
         width: 100%; }
       .cards .card.card-img .card-content {
         display: flex;
-        flex-wrap: nowrap;
         flex-direction: row;
+        flex-wrap: nowrap;
         padding: 10px;
         width: 100%; }
         .cards .card.card-img .card-content hgroup {
@@ -287,11 +367,11 @@ aside {
       font-weight: normal; }
 
 .home .card {
-  flex: 1 0 0%; }
+  flex: 1 0 0; }
 
 .menu .restaurant-title {
-  width: 100%;
-  position: relative; }
+  position: relative;
+  width: 100%; }
   .menu .restaurant-title .like {
     position: absolute;
     right: 30px;
@@ -299,73 +379,76 @@ aside {
 .menu .cards {
   background-color: transparent;
   flex-flow: row wrap;
-  margin-right: 0;
-  margin-left: 0; }
+  margin-left: 0;
+  margin-right: 0; }
   .menu .cards h2.sub-title {
     font-size: 1rem;
     font-weight: normal;
     width: 100%; }
     .menu .cards h2.sub-title::after {
       border-bottom: 2px solid #99e2d0;
-      content: "";
+      content: '';
       display: block;
-      width: 40px;
-      padding-top: 3px; }
+      padding-top: 3px;
+      width: 40px; }
   .menu .cards .card {
     border-radius: 15px;
     cursor: pointer;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     flex-wrap: nowrap;
+    justify-content: space-between;
     overflow: hidden; }
     .menu .cards .card hgroup {
-      padding: 10px;
       flex: 1;
+      overflow: hidden;
+      padding: 10px;
       text-overflow: ellipsis;
-      white-space: nowrap;
-      overflow: hidden; }
+      white-space: nowrap; }
     .menu .cards .card h2 {
       font-size: 1.125rem;
-      margin: 0 0 5px 0;
+      margin: 0 0 5px;
+      overflow: hidden;
       text-overflow: ellipsis;
-      white-space: nowrap;
-      overflow: hidden; }
+      white-space: nowrap; }
     .menu .cards .card h3 {
+      color: gray;
       font-size: 1rem;
       font-weight: normal;
-      color: gray;
+      overflow: hidden;
       text-overflow: ellipsis;
-      white-space: nowrap;
-      overflow: hidden; }
+      white-space: nowrap; }
     .menu .cards .card .caption-check-box {
-      position: relative;
-      border-top-right-radius: 15px;
       border-bottom-right-radius: 15px;
-      display: none; }
+      border-top-right-radius: 15px;
+      display: none;
+      position: relative; }
       .menu .cards .card .caption-check-box i {
-        font-size: 24px;
         color: #fff;
+        font-size: 24px;
         transform: rotate(360deg); }
     .menu .cards .card .price {
-      font-weight: bold;
-      font-size: 1.125rem;
-      text-align: right;
-      padding-right: 10px;
-      display: flex;
       align-items: center;
-      justify-content: flex-end; }
+      display: flex;
+      font-size: 1.125rem;
+      font-weight: bold;
+      justify-content: flex-end;
+      padding-right: 10px;
+      text-align: right; }
 .menu .order {
-  text-align: center;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  text-align: center; }
 
 footer {
+  background-color: #333;
+  color: #fff;
   padding: 20px;
-  background-color: #333333;
   text-align: center; }
-  footer #footer {
-    max-width: 1680px;
-    margin: auto; }
+  footer a {
+    color: #fff; }
+  footer #f-container {
+    margin: auto;
+    max-width: 100%; }
   footer .logo img {
     filter: invert(1); }
   footer .col-3 {
@@ -375,8 +458,6 @@ footer {
     flex: 1 0 50%; }
   footer .footer-icon i {
     min-width: 30px; }
-  footer a {
-    color: #fff !important; }
 
 @keyframes check-box {
   0% {
@@ -389,17 +470,17 @@ footer {
     transform: rotate(5deg); } }
 @keyframes caption-check-box {
   0% {
-    opacity: 0.4;
-    transform: translate(15px, 0px); }
+    opacity: .4;
+    transform: translate(15px, 0); }
   40% {
-    opacity: 0.6;
-    transform: translate(10px, 0px); }
+    opacity: .6;
+    transform: translate(10px, 0); }
   70% {
-    opacity: 0.8;
-    transform: translate(6px, 0px); }
+    opacity: .8;
+    transform: translate(6px, 0); }
   100% {
     opacity: 1;
-    transform: translate(1px, 0px); } }
+    transform: translate(1px, 0); } }
 @keyframes fadein {
   from {
     opacity: 0; }
@@ -409,16 +490,16 @@ footer {
   100% {
     opacity: 0;
     z-index: -10; } }
-@-webkit-keyframes spinner {
+@keyframes spinner {
   0% {
-    transform: rotate(0deg);
-    background: #fface8; }
+    background: #fface8;
+    transform: rotate(0deg); }
   50% {
-    transform: rotate(180deg);
-    background: #ff79da; }
+    background: #ff79da;
+    transform: rotate(180deg); }
   100% {
-    transform: rotate(360deg);
-    background: #fface8; } }
+    background: #fface8;
+    transform: rotate(360deg); } }
 .menu .card:hover hgroup {
   flex: 1;
   overflow: hidden;
