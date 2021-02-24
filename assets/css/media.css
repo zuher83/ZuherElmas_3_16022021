@@ -15,13 +15,15 @@
     flex-flow: column;
     flex-direction: column; }
 
-  .cards {
+  main .cards {
     margin-right: 0;
     margin-left: 0;
     flex-flow: column; }
-    .cards > .card {
+    main .cards > .card {
       margin-bottom: 15px;
-      flex: 1 0 33%; } }
+      flex: 1 0 33%; }
+      main .cards > .card:hover .caption-check-box i {
+        left: 25% !important; } }
 @media all and (max-width: 576px) {
   header {
     flex-flow: column; }
@@ -90,9 +92,11 @@
       width: 150px; }
       footer .logo img {
         max-width: 150px; } }
-@media all and (max-width: 576px) {
+@media screen and (max-width: 375px) {
   .menu .cards {
     flex-direction: column;
-    flex-wrap: nowrap; } }
+    flex-wrap: nowrap; }
+    .menu .cards .card:hover .caption-check-box i {
+      left: 20% !important; } }
 
 /*# sourceMappingURL=media.css.map */

@@ -26,7 +26,7 @@
     flex-direction: column;
   }
 
-  .cards {
+  main .cards {
     margin-right: 0;
     margin-left: 0;
     flex-flow: column;
@@ -34,6 +34,12 @@
     > .card {
       margin-bottom: 15px;
       flex: 1 0 33%;
+
+      &:hover {
+        .caption-check-box i {
+          left: 25% !important;
+        }
+      }
     }
   }
 }
@@ -139,6 +145,7 @@
 
     .logo {
       width: 150px;
+
       img {
         max-width: 150px;
       }
@@ -146,9 +153,17 @@
   }
 }
 
-@media all and (max-width: 576px) {
+@media screen and (max-width: 375px) {
   .menu .cards {
     flex-direction: column;
     flex-wrap: nowrap;
+
+    .card {
+      &:hover {
+        .caption-check-box i {
+          left: 20% !important;
+        }
+      }
+    }
   }
 }
