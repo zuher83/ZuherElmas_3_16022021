@@ -221,6 +221,8 @@ header {
     left: 20px;
     position: absolute;
     top: 30px; }
+  header .logo {
+    margin: auto; }
   header .cover-img {
     height: 270px;
     width: 100%;

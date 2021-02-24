@@ -24,7 +24,7 @@
       margin-bottom: 15px; }
       main .cards > .card:hover .caption-check-box i {
         left: 25% !important; } }
-@media all and (max-width: 576px) {
+@media screen and (max-width: 576px) {
   header {
     flex-flow: column; }
     header .logo {
@@ -47,7 +47,7 @@
       z-index: -1; }
 
   .cards {
-    flex-flow: column;
+    flex-flow: column wrap;
     margin-left: 0;
     margin-right: 0; }
     .cards > .card {
@@ -62,16 +62,17 @@
     .menu main h1.shrikhand {
       font-size: 1.75rem;
       padding: 30px 10px 20px 15px; }
-    .menu main .cards h2.sub-title {
-      font-size: 1.25rem; }
-    .menu main .cards .card {
-      border-radius: 15px;
-      cursor: pointer;
-      display: flex;
-      flex-direction: row;
-      margin: 10px 0; }
-      .menu main .cards .card:hover .caption-check-box i {
-        left: 27%; }
+    .menu main .cards {
+      flex-flow: column nowrap; }
+      .menu main .cards h2.sub-title {
+        font-size: 1.25rem; }
+      .menu main .cards .card {
+        border-radius: 15px;
+        cursor: pointer;
+        flex-direction: row;
+        margin: 10px 0; }
+        .menu main .cards .card:hover .caption-check-box i {
+          left: 27%; }
 
   aside {
     margin-top: 25px; }
