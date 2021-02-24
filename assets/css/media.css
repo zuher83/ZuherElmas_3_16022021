@@ -5,7 +5,8 @@
   .menu .cards {
     margin-right: 0;
     margin-left: 0;
-    flex-flow: column; }
+    flex-flow: row wrap;
+    align-items: stretch; }
     .menu .cards > .card {
       margin-bottom: 15px;
       flex: 1 0 33%; } }
@@ -57,24 +58,30 @@
     margin-top: -50px; }
     .menu main h1.shrikhand {
       padding: 30px 10px 20px 15px;
-      font-size: 1.5rem; }
+      font-size: 1.75rem; }
+    .menu main .cards h2.sub-title {
+      font-size: 1.25rem; }
     .menu main .cards .card {
       margin: 10px 0;
       border-radius: 15px;
       cursor: pointer;
       display: flex;
       flex-direction: row; }
+      .menu main .cards .card:hover .caption-check-box i {
+        left: 27%; }
 
-  aside .select {
-    display: flex;
-    flex-flow: column;
-    flex-direction: column;
-    padding: 15px;
-    position: relative; }
-  aside .step-button {
-    flex: 0 0 100%;
-    margin-right: 0;
-    margin-left: 0; }
+  aside {
+    margin-top: 25px; }
+    aside .select {
+      display: flex;
+      flex-flow: column;
+      flex-direction: column;
+      padding: 15px;
+      position: relative; }
+    aside .step-button {
+      flex: 0 0 100%;
+      margin-right: 0;
+      margin-left: 0; }
 
   footer {
     text-align: left; }
