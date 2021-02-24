@@ -44,7 +44,7 @@
   }
 }
 
-@media all and (max-width: 576px) {
+@media screen and (max-width: 576px) {
   header {
     flex-flow: column;
 
@@ -78,7 +78,7 @@
   }
 
   .cards {
-    flex-flow: column;
+    flex-flow: column wrap;
     margin-left: 0;
     margin-right: 0;
 
@@ -101,6 +101,8 @@
       }
 
       .cards {
+        flex-flow: column nowrap;
+
         h2.sub-title {
           font-size: 1.25rem;
         }
@@ -108,7 +110,6 @@
         .card {
           border-radius: 15px;
           cursor: pointer;
-          display: flex;
           flex-direction: row;
           margin: 10px 0;
 
