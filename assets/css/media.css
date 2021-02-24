@@ -39,7 +39,8 @@
       flex-direction: row;
       justify-content: center;
       padding: 5px;
-      margin-bottom: 0; }
+      margin-bottom: 0;
+      margin-left: 70px; }
     header .cover-img {
       z-index: -1; }
 
@@ -89,5 +90,9 @@
       width: 150px; }
       footer .logo img {
         max-width: 150px; } }
+@media all and (max-width: 576px) {
+  .menu .cards {
+    flex-direction: column;
+    flex-wrap: nowrap; } }
 
 /*# sourceMappingURL=media.css.map */

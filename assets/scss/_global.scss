@@ -36,12 +36,13 @@ header {
 
   .header-left {
     width: 375px;
+    background-color: darken($grey-color,5);
+    margin-bottom: 20px;
   }
 
   .search-location {
     display: flex;
-    background-color: #eaeaea;
-    margin-bottom: 20px;
+    //background-color: #eaeaea;
     border-top: 2px solid #e0e0e0;
 
     .icon-wrapper {
