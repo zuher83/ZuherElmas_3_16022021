@@ -7,14 +7,14 @@
 
   .menu {
     .cards {
-      margin-right: 0;
-      margin-left: 0;
-      flex-flow: row wrap;
       align-items: stretch;
+      flex-flow: row wrap;
+      margin-left: 0;
+      margin-right: 0;
 
       > .card {
-        margin-bottom: 15px;
         flex: 1 0 33%;
+        margin-bottom: 15px;
       }
     }
   }
@@ -22,18 +22,18 @@
 
 @media screen and (max-width: 768px) {
   aside .select {
-    flex-flow: column;
     flex-direction: column;
+    flex-flow: column;
   }
 
   main .cards {
-    margin-right: 0;
-    margin-left: 0;
     flex-flow: column;
+    margin-left: 0;
+    margin-right: 0;
 
     > .card {
-      margin-bottom: 15px;
       flex: 1 0 33%;
+      margin-bottom: 15px;
 
       &:hover {
         .caption-check-box i {
@@ -43,7 +43,6 @@
     }
   }
 }
-
 
 @media all and (max-width: 576px) {
   header {
@@ -55,8 +54,8 @@
       text-align: center;
 
       img {
-        width: 60%;
         object-fit: cover;
+        width: 60%;
       }
     }
 
@@ -65,12 +64,12 @@
     }
 
     .search-location {
-      text-align: center;
       flex-direction: row;
       justify-content: center;
-      padding: 5px;
       margin-bottom: 0;
       margin-left: 70px;
+      padding: 5px;
+      text-align: center;
     }
 
     .cover-img {
@@ -79,13 +78,13 @@
   }
 
   .cards {
-    margin-right: 0;
-    margin-left: 0;
     flex-flow: column;
+    margin-left: 0;
+    margin-right: 0;
 
     > .card {
+      flex: 1 0 0;
       margin-bottom: 15px;
-      flex: 1 0 0%;
     }
   }
 
@@ -93,12 +92,12 @@
     main {
       border-top-left-radius: 35px;
       border-top-right-radius: 35px;
-      z-index: 999;
       margin-top: -50px;
+      z-index: 999;
 
       h1.shrikhand {
-        padding: 30px 10px 20px 15px;
         font-size: 1.75rem;
+        padding: 30px 10px 20px 15px;
       }
 
       .cards {
@@ -107,11 +106,11 @@
         }
 
         .card {
-          margin: 10px 0;
           border-radius: 15px;
           cursor: pointer;
           display: flex;
           flex-direction: row;
+          margin: 10px 0;
 
           &:hover .caption-check-box i {
             left: 27%;
@@ -126,17 +125,16 @@
 
     .select {
       display: flex;
-      flex-flow: column;
       flex-direction: column;
+      flex-flow: column;
       padding: 15px;
       position: relative;
-
     }
 
     .step-button {
       flex: 0 0 100%;
-      margin-right: 0;
       margin-left: 0;
+      margin-right: 0;
     }
   }
 

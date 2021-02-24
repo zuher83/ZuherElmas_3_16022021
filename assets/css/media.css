@@ -3,25 +3,25 @@
     flex: 1 0 33%; }
 
   .menu .cards {
-    margin-right: 0;
-    margin-left: 0;
+    align-items: stretch;
     flex-flow: row wrap;
-    align-items: stretch; }
+    margin-left: 0;
+    margin-right: 0; }
     .menu .cards > .card {
-      margin-bottom: 15px;
-      flex: 1 0 33%; } }
+      flex: 1 0 33%;
+      margin-bottom: 15px; } }
 @media screen and (max-width: 768px) {
   aside .select {
-    flex-flow: column;
-    flex-direction: column; }
+    flex-direction: column;
+    flex-flow: column; }
 
   main .cards {
-    margin-right: 0;
+    flex-flow: column;
     margin-left: 0;
-    flex-flow: column; }
+    margin-right: 0; }
     main .cards > .card {
-      margin-bottom: 15px;
-      flex: 1 0 33%; }
+      flex: 1 0 33%;
+      margin-bottom: 15px; }
       main .cards > .card:hover .caption-check-box i {
         left: 25% !important; } }
 @media all and (max-width: 576px) {
@@ -32,44 +32,44 @@
       padding: 15px;
       text-align: center; }
       header .logo img {
-        width: 60%;
-        object-fit: cover; }
+        object-fit: cover;
+        width: 60%; }
     header .header-left {
       width: 100%; }
     header .search-location {
-      text-align: center;
       flex-direction: row;
       justify-content: center;
-      padding: 5px;
       margin-bottom: 0;
-      margin-left: 70px; }
+      margin-left: 70px;
+      padding: 5px;
+      text-align: center; }
     header .cover-img {
       z-index: -1; }
 
   .cards {
-    margin-right: 0;
+    flex-flow: column;
     margin-left: 0;
-    flex-flow: column; }
+    margin-right: 0; }
     .cards > .card {
-      margin-bottom: 15px;
-      flex: 1 0 0%; }
+      flex: 1 0 0;
+      margin-bottom: 15px; }
 
   .menu main {
     border-top-left-radius: 35px;
     border-top-right-radius: 35px;
-    z-index: 999;
-    margin-top: -50px; }
+    margin-top: -50px;
+    z-index: 999; }
     .menu main h1.shrikhand {
-      padding: 30px 10px 20px 15px;
-      font-size: 1.75rem; }
+      font-size: 1.75rem;
+      padding: 30px 10px 20px 15px; }
     .menu main .cards h2.sub-title {
       font-size: 1.25rem; }
     .menu main .cards .card {
-      margin: 10px 0;
       border-radius: 15px;
       cursor: pointer;
       display: flex;
-      flex-direction: row; }
+      flex-direction: row;
+      margin: 10px 0; }
       .menu main .cards .card:hover .caption-check-box i {
         left: 27%; }
 
@@ -77,14 +77,14 @@
     margin-top: 25px; }
     aside .select {
       display: flex;
-      flex-flow: column;
       flex-direction: column;
+      flex-flow: column;
       padding: 15px;
       position: relative; }
     aside .step-button {
       flex: 0 0 100%;
-      margin-right: 0;
-      margin-left: 0; }
+      margin-left: 0;
+      margin-right: 0; }
 
   footer {
     text-align: left; }
