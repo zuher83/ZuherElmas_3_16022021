@@ -107,18 +107,24 @@ main {
   text-align: center;
   padding: 30px 10px;
   flex: 0 0 100%;
+  margin: 0 -15px;
 
   h1 {
     margin-bottom: 15px;
+    padding: 0 50px;
   }
 
   h2 {
     color: #888;
     font-weight: normal;
+    font-size: 1.125rem;
   }
 
   hgroup {
-    margin-bottom: 20px;
+    margin-bottom: 35px;
+  }
+  .button1 {
+    margin-bottom: 30px;
   }
 }
 
@@ -152,6 +158,7 @@ aside {
     border-radius: 30px;
     box-shadow: $btn1-shadow;
     position: relative;
+
 
     .circle-number {
       background-color: $primary;
@@ -192,12 +199,15 @@ aside {
   }
 }
 
+.home main > section {
+  flex: 1 0 0%;
+}
+
 //Cards css
 .cards {
   display: flex;
   flex-wrap: wrap;
   flex-flow: row wrap;
-  //background-color: #f2f2f2;
   margin-right: -15px;
   margin-left: -15px;
   padding: 15px;
@@ -229,7 +239,7 @@ aside {
         position: relative;
         max-height: 200px;
 
-        label {
+        .img-btn-left {
           position: absolute;
           z-index: 999;
           background-color: $tertiary;
@@ -270,39 +280,7 @@ aside {
       font-weight: normal;
     }
 
-    //Like button (heart)
-    .like {
-      position: relative;
 
-      .hover-icon {
-        display: none;
-      }
-
-      i {
-        font-size: 24px;
-        color: #888888;
-        left: 50%;
-      }
-
-      &:hover {
-        overflow: hidden;
-        cursor: pointer;
-
-        .default-icon {
-          opacity: 0;
-          display: none;
-          transition: all 0.5s 0s ease;
-        }
-
-        .hover-icon {
-          opacity: 1;
-          display: unset;
-          transition: all 0.5s 0s ease;
-          color: $primary;
-        }
-      }
-
-    }
   }
 }
 
@@ -320,34 +298,6 @@ aside {
       position: absolute;
       right: 30px;
       top: 30px;
-
-      .hover-icon {
-        display: none;
-      }
-
-      i {
-        font-size: 24px;
-        color: #888888;
-        left: 50%;
-      }
-
-      &:hover {
-        overflow: hidden;
-        cursor: pointer;
-
-        .default-icon {
-          opacity: 0;
-          display: none;
-          transition: all 0.5s 0s ease;
-        }
-
-        .hover-icon {
-          opacity: 1;
-          display: unset;
-          transition: all 0.5s 0s ease;
-          color: $primary;
-        }
-      }
     }
   }
 

@@ -164,14 +164,19 @@ main {
 .reserve {
   text-align: center;
   padding: 30px 10px;
-  flex: 0 0 100%; }
+  flex: 0 0 100%;
+  margin: 0 -15px; }
   .reserve h1 {
-    margin-bottom: 15px; }
+    margin-bottom: 15px;
+    padding: 0 50px; }
   .reserve h2 {
     color: #888;
-    font-weight: normal; }
+    font-weight: normal;
+    font-size: 1.125rem; }
   .reserve hgroup {
-    margin-bottom: 20px; }
+    margin-bottom: 35px; }
+  .reserve .button1 {
+    margin-bottom: 30px; }
 
 aside {
   padding: 30px 10px;
@@ -196,7 +201,7 @@ aside {
     margin-right: 15px;
     margin-left: 15px;
     border-radius: 30px;
-    box-shadow: 0px 5px 15px 0px #b6b6b6;
+    box-shadow: 0px 5px 15px 0px #c3c3c3;
     position: relative; }
     aside .step-button .circle-number {
       background-color: #9356dc;
@@ -224,6 +229,9 @@ aside {
       aside .step-button:hover .icon {
         color: #9356dc; }
 
+.home main > section {
+  flex: 1 0 0%; }
+
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -250,7 +258,7 @@ aside {
       .cards .card.card-img .card-img-header {
         position: relative;
         max-height: 200px; }
-        .cards .card.card-img .card-img-header label {
+        .cards .card.card-img .card-img-header .img-btn-left {
           position: absolute;
           z-index: 999;
           background-color: #99e2d0;
@@ -277,26 +285,6 @@ aside {
       font-weight: bold; }
     .cards .card h3 {
       font-weight: normal; }
-    .cards .card .like {
-      position: relative; }
-      .cards .card .like .hover-icon {
-        display: none; }
-      .cards .card .like i {
-        font-size: 24px;
-        color: #888888;
-        left: 50%; }
-      .cards .card .like:hover {
-        overflow: hidden;
-        cursor: pointer; }
-        .cards .card .like:hover .default-icon {
-          opacity: 0;
-          display: none;
-          transition: all 0.5s 0s ease; }
-        .cards .card .like:hover .hover-icon {
-          opacity: 1;
-          display: unset;
-          transition: all 0.5s 0s ease;
-          color: #9356dc; }
 
 .home .card {
   flex: 1 0 0%; }
@@ -308,24 +296,6 @@ aside {
     position: absolute;
     right: 30px;
     top: 30px; }
-    .menu .restaurant-title .like .hover-icon {
-      display: none; }
-    .menu .restaurant-title .like i {
-      font-size: 24px;
-      color: #888888;
-      left: 50%; }
-    .menu .restaurant-title .like:hover {
-      overflow: hidden;
-      cursor: pointer; }
-      .menu .restaurant-title .like:hover .default-icon {
-        opacity: 0;
-        display: none;
-        transition: all 0.5s 0s ease; }
-      .menu .restaurant-title .like:hover .hover-icon {
-        opacity: 1;
-        display: unset;
-        transition: all 0.5s 0s ease;
-        color: #9356dc; }
 .menu .cards {
   background-color: transparent;
   flex-flow: row wrap;
@@ -471,6 +441,28 @@ footer {
     left: 30%;
     animation-iteration-count: 1;
     animation: check-box ease 0.25s; }
+
+.like {
+  position: relative; }
+  .like .hover-icon {
+    position: absolute;
+    left: 0;
+    opacity: 0; }
+  .like i {
+    font-size: 24px;
+    color: #888888;
+    left: 50%; }
+  .like:hover {
+    overflow: hidden;
+    cursor: pointer; }
+    .like:hover .default-icon {
+      opacity: 0;
+      transition: all 0.5s 0s ease; }
+    .like:hover .hover-icon {
+      opacity: 1;
+      transition: all 0.5s 0s ease;
+      color: #9356dc;
+      z-index: 999; }
 
 .fade-1 {
   animation: fadein 0.3s; }
