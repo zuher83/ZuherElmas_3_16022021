@@ -2,6 +2,9 @@
   .home .card {
     flex: 1 0 33%; }
 
+  .reserve {
+    margin: 0; }
+
   .menu .cards {
     align-items: stretch;
     flex-flow: row wrap;
