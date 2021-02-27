@@ -21,25 +21,28 @@
 }
 
 @media screen and (max-width: 768px) {
+
+  header .header-left {
+    width: 100%;
+    .search-location {
+      margin: auto;
+      width: 200px;
+    }
+  }
+
   aside .select {
     flex-direction: column;
     flex-flow: column;
   }
 
   main .cards {
-    flex-flow: column;
+    flex-flow: row wrap;
     margin-left: 0;
     margin-right: 0;
 
     > .card {
       flex: 1 0 33%;
       margin-bottom: 15px;
-
-      &:hover {
-        .caption-check-box i {
-          left: 25% !important;
-        }
-      }
     }
   }
 }
@@ -77,7 +80,11 @@
     }
   }
 
-  .cards {
+  .reserve h2 {
+    margin: 0 15px;
+  }
+
+  main .cards {
     flex-flow: column wrap;
     margin-left: 0;
     margin-right: 0;
@@ -156,13 +163,5 @@
   .menu .cards {
     flex-direction: column;
     flex-wrap: nowrap;
-
-    .card {
-      &:hover {
-        .caption-check-box i {
-          left: 20% !important;
-        }
-      }
-    }
   }
 }

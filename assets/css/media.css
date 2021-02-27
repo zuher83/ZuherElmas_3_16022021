@@ -11,19 +11,23 @@
       flex: 1 0 33%;
       margin-bottom: 15px; } }
 @media screen and (max-width: 768px) {
+  header .header-left {
+    width: 100%; }
+    header .header-left .search-location {
+      margin: auto;
+      width: 200px; }
+
   aside .select {
     flex-direction: column;
     flex-flow: column; }
 
   main .cards {
-    flex-flow: column;
+    flex-flow: row wrap;
     margin-left: 0;
     margin-right: 0; }
     main .cards > .card {
       flex: 1 0 33%;
-      margin-bottom: 15px; }
-      main .cards > .card:hover .caption-check-box i {
-        left: 25% !important; } }
+      margin-bottom: 15px; } }
 @media screen and (max-width: 576px) {
   header {
     flex-flow: column; }
@@ -46,11 +50,14 @@
     header .cover-img {
       z-index: -1; }
 
-  .cards {
+  .reserve h2 {
+    margin: 0 15px; }
+
+  main .cards {
     flex-flow: column wrap;
     margin-left: 0;
     margin-right: 0; }
-    .cards > .card {
+    main .cards > .card {
       flex: 1 0 0;
       margin-bottom: 15px; }
 
@@ -96,8 +103,6 @@
 @media screen and (max-width: 375px) {
   .menu .cards {
     flex-direction: column;
-    flex-wrap: nowrap; }
-    .menu .cards .card:hover .caption-check-box i {
-      left: 20% !important; } }
+    flex-wrap: nowrap; } }
 
 /*# sourceMappingURL=media.css.map */

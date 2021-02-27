@@ -190,8 +190,7 @@ h3 {
 header {
   align-items: center;
   display: flex;
-  flex-direction: column;
-  flex-flow: wrap;
+  flex-flow: column wrap;
   margin: auto;
   max-width: 1440px;
   padding-top: 10px;
@@ -325,7 +324,7 @@ aside {
   margin-right: -15px;
   padding: 15px; }
   .cards h1 {
-    margin: 15px 0 15px 15px;
+    padding: 15px 0 15px 15px;
     width: 100%; }
   .cards .card {
     background-color: #fff;
