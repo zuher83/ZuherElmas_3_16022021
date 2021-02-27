@@ -137,7 +137,7 @@ aside {
   flex: 0 0 100%;
   padding: 30px 10px;
 
-  h1 {
+  h2 {
     margin-bottom: 10px;
     margin-left: 5px;
     width: 100%;
@@ -219,7 +219,7 @@ aside {
   padding: 15px;
 
   //Title cards section
-  h1 {
+  h2 {
     padding: 15px 0 15px 15px;
     width: 100%;
   }
@@ -277,11 +277,11 @@ aside {
       }
     }
 
-    h2 {
+    h3 {
       font-weight: bold;
     }
 
-    h3 {
+    h4 {
       font-weight: normal;
     }
 
@@ -316,6 +316,7 @@ aside {
       font-size: 1rem;
       font-weight: normal;
       width: 100%;
+      padding-left: 0;
 
       &::after {
         border-bottom: 2px solid $tertiary;
@@ -343,7 +344,7 @@ aside {
         white-space: nowrap;
       }
 
-      h2 {
+      h3 {
         font-size: 1.125rem;
         margin: 0 0 5px;
         overflow: hidden;
@@ -351,7 +352,7 @@ aside {
         white-space: nowrap;
       }
 
-      h3 {
+      h4 {
         color: gray;
         font-size: 1rem;
         font-weight: normal;

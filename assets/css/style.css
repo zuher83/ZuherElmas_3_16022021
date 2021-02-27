@@ -264,7 +264,7 @@ main {
 aside {
   flex: 0 0 100%;
   padding: 30px 10px; }
-  aside h1 {
+  aside h2 {
     margin-bottom: 10px;
     margin-left: 5px;
     width: 100%; }
@@ -323,7 +323,7 @@ aside {
   margin-left: -15px;
   margin-right: -15px;
   padding: 15px; }
-  .cards h1 {
+  .cards h2 {
     padding: 15px 0 15px 15px;
     width: 100%; }
   .cards .card {
@@ -364,9 +364,9 @@ aside {
         width: 100%; }
         .cards .card.card-img .card-content hgroup {
           flex: 0 0 85%; }
-    .cards .card h2 {
-      font-weight: bold; }
     .cards .card h3 {
+      font-weight: bold; }
+    .cards .card h4 {
       font-weight: normal; }
 
 .home .card {
@@ -387,7 +387,8 @@ aside {
   .menu .cards h2.sub-title {
     font-size: 1rem;
     font-weight: normal;
-    width: 100%; }
+    width: 100%;
+    padding-left: 0; }
     .menu .cards h2.sub-title::after {
       border-bottom: 2px solid #99e2d0;
       content: '';
@@ -408,13 +409,13 @@ aside {
       padding: 10px;
       text-overflow: ellipsis;
       white-space: nowrap; }
-    .menu .cards .card h2 {
+    .menu .cards .card h3 {
       font-size: 1.125rem;
       margin: 0 0 5px;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap; }
-    .menu .cards .card h3 {
+    .menu .cards .card h4 {
       color: gray;
       font-size: 1rem;
       font-weight: normal;
