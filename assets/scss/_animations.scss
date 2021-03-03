@@ -1,8 +1,10 @@
 @import 'keyframes';
 
 //Menu cards CSS
-.menu {
-  .card:hover {
+.card-menu {
+  &:hover {
+    box-shadow: $btn1-shadow-hover;
+
     hgroup {
       flex: 1;
       overflow: hidden;
@@ -11,6 +13,9 @@
     }
 
     .price {
+      animation: caption-check-box-price ease .3s;
+      animation-fill-mode: forwards;
+      animation-iteration-count: 1;
       min-width: 50px;
     }
 
@@ -27,17 +32,14 @@
     }
 
     .fa-check-circle {
-      animation: check-box ease .25s;
+      animation: check-box ease .5s;
       animation-iteration-count: 1;
       left: 27%;
       position: absolute;
       top: 30%;
     }
-
   }
-
 }
-
 
 //Like button (heart)
 .like {
@@ -61,13 +63,13 @@
 
     .default-icon {
       opacity: 0;
-      transition: all .5s 0s ease;
+      transition: .5s 0s ease;
     }
 
     .hover-icon {
       color: $primary;
       opacity: 1;
-      transition: all .5s 0s ease;
+      transition: .5s 0s ease;
       z-index: 999;
     }
   }
@@ -136,4 +138,3 @@
     }
   }
 }
-

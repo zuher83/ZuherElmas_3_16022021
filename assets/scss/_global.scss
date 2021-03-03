@@ -40,8 +40,15 @@ header {
   }
 
   .search-location {
-    border-top: 2px solid #e0e0e0;
+    border-top: 2px solid $border-contrast;
     display: flex;
+
+    input {
+      background-color: transparent;
+      border: 0;
+      padding: 15px 10px;
+      width: 100%;
+    }
 
     .icon-wrapper {
       padding: 8px 10px;
@@ -49,19 +56,6 @@ header {
 
     .input-field {
       flex: 1 0 0;
-
-      input {
-        background-color: transparent;
-        border: 0;
-        padding: 15px 10px;
-        width: 100%;
-
-        &[type="text"]::placeholder {
-          color: #333;
-          font-size: 1rem;
-          font-weight: bold;
-        }
-      }
     }
   }
 
@@ -89,6 +83,17 @@ header {
   }
 }
 
+.search-location {
+  &[type='text'] {
+
+    &::placeholder {
+      color: $text-grey;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+  }
+}
+
 //Main section
 main {
   display: flex;
@@ -99,12 +104,7 @@ main {
 
 }
 
-.menu main {
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
-  margin-top: -40px;
-  z-index: 999;
-}
+
 
 .reserve {
   flex: 0 0 100%;
@@ -117,7 +117,7 @@ main {
   }
 
   h2 {
-    color: #888;
+    color: $text-grey-light;
     font-size: 1.125rem;
     font-weight: normal;
     margin: 20px 15px;
@@ -204,8 +204,17 @@ aside {
   }
 }
 
-.home main > section {
-  flex: 1 0 0;
+.home {
+  main {
+    >section {
+      flex: 1 0 0;
+    }
+
+    .card {
+      flex: 1 0 0;
+    }
+  }
+
 }
 
 //Cards css
@@ -223,78 +232,47 @@ aside {
     padding: 15px 0 15px 15px;
     width: 100%;
   }
+}
 
-  //One card css
-  .card {
-    background-color: $white-color;
-    box-shadow: $card-shadow;
-    display: flex;
-    flex: 1 0 25%;
-    flex-direction: column;
-    margin: 15px;
-    min-width: 0;
-    position: relative;
-    word-wrap: break-word;
+//One card css
+.card {
+  background-color: $white-color;
+  box-shadow: $card-shadow;
+  display: flex;
+  flex: 1 0 25%;
+  flex-direction: column;
+  margin: 15px;
+  min-width: 0;
+  position: relative;
+  word-wrap: break-word;
 
-    //Imaged card
-    &.card-img {
-      border-radius: 15px;
+  //Imaged card
+  h3 {
+    font-weight: bold;
+  }
 
-      .card-img-header {
-        max-height: 200px;
-        position: relative;
-
-        .img-btn-left {
-          background-color: $tertiary;
-          color: darken($tertiary, 35);
-          font-weight: bold;
-          padding: 3px 10px;
-          position: absolute;
-          right: 10px;
-          top: 10px;
-          z-index: 999;
-        }
-      }
-
-      img {
-        border-top-left-radius: 1em;
-        border-top-right-radius: 1em;
-        max-height: 200px;
-        object-fit: cover;
-        width: 100%;
-      }
-
-      .card-content {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        padding: 10px;
-        width: 100%;
-
-        hgroup {
-          flex: 0 0 85%;
-        }
-      }
-    }
-
-    h3 {
-      font-weight: bold;
-    }
-
-    h4 {
-      font-weight: normal;
-    }
-
-
+  h4 {
+    font-weight: normal;
   }
 }
 
-.home .card {
-  flex: 1 0 0;
-}
 
-//Menu cards CSS
+// menu css
 .menu {
+  main {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    margin-top: -40px;
+    z-index: 999;
+  }
+
+  .cards {
+    background-color: transparent;
+    flex-flow: row wrap;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
   .restaurant-title {
     position: relative;
     width: 100%;
@@ -306,95 +284,130 @@ aside {
     }
   }
 
-  .cards {
-    background-color: transparent;
-    flex-flow: row wrap;
-    margin-left: 0;
-    margin-right: 0;
+  .sub-title {
+    font-size: 1rem;
+    font-weight: normal;
+    padding-left: 0;
+    width: 100%;
 
-    h2.sub-title {
-      font-size: 1rem;
-      font-weight: normal;
-      width: 100%;
-      padding-left: 0;
-
-      &::after {
-        border-bottom: 2px solid $tertiary;
-        content: '';
-        display: block;
-        padding-top: 3px;
-        width: 40px;
-      }
+    &::after {
+      border-bottom: 2px solid $tertiary;
+      content: '';
+      display: block;
+      padding-top: 3px;
+      width: 40px;
     }
-
-    .card {
-      border-radius: 15px;
-      cursor: pointer;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      justify-content: space-between;
-      overflow: hidden;
-
-      hgroup {
-        flex: 1;
-        overflow: hidden;
-        padding: 10px;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-      }
-
-      h3 {
-        font-size: 1.125rem;
-        margin: 0 0 5px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-      }
-
-      h4 {
-        color: gray;
-        font-size: 1rem;
-        font-weight: normal;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-      }
-
-      .caption-check-box {
-        border-bottom-right-radius: 15px;
-        border-top-right-radius: 15px;
-        display: none;
-        position: relative;
-
-        i {
-          color: #fff;
-          font-size: 24px;
-          transform: rotate(360deg);
-        }
-      }
-
-      .price {
-        align-items: center;
-        display: flex;
-        font-size: 1.125rem;
-        font-weight: bold;
-        justify-content: flex-end;
-        padding-right: 10px;
-        text-align: right;
-      }
-    }
-  }
-
-  //Order button
-  .order {
-    margin-bottom: 20px;
-    text-align: center;
   }
 }
 
+// Card img css
+.card-img {
+  border-radius: 15px;
+
+  .card-img-header {
+    max-height: 200px;
+    position: relative;
+
+    .img-btn-left {
+      background-color: $tertiary;
+      color: darken($tertiary, 35);
+      font-weight: bold;
+      padding: 3px 10px;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      z-index: 999;
+    }
+  }
+
+  img {
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    max-height: 200px;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .card-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 10px;
+    width: 100%;
+
+    hgroup {
+      flex: 0 0 85%;
+    }
+  }
+}
+
+.card-menu {
+  border-radius: 15px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  overflow: hidden;
+
+  hgroup {
+    flex: 1;
+    overflow: hidden;
+    padding: 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  h3 {
+    font-size: 1.125rem;
+    margin: 0 0 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  h4 {
+    color: $text-grey;
+    font-size: 1rem;
+    font-weight: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .caption-check-box {
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    display: none;
+    position: relative;
+
+    i {
+      color: $white-color;
+      font-size: 24px;
+      transform: rotate(360deg);
+    }
+  }
+
+  .price {
+    align-items: center;
+    display: flex;
+    font-size: 1.125rem;
+    font-weight: bold;
+    justify-content: flex-end;
+    padding-right: 10px;
+    text-align: right;
+  }
+}
+
+
+//Order button
+.order {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
 footer {
-  background-color: #333;
+  background-color: $text-grey;
   color: $white-color;
   padding: 20px;
   text-align: center;
@@ -404,7 +417,7 @@ footer {
     color: $white-color;
   }
 
-  #f-container {
+  .container {
     margin: auto;
     max-width: 100%;
   }

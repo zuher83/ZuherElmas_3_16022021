@@ -1,111 +1,191 @@
 @media screen and (max-width: 1024px) {
   .home .card {
-    flex: 1 0 33%; }
-
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 33%;
+            flex: 1 0 33%;
+  }
   .reserve {
-    margin: 0; }
-
+    margin: 0;
+  }
   .menu .cards {
-    align-items: stretch;
-    flex-flow: row wrap;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
     margin-left: 0;
-    margin-right: 0; }
-    .menu .cards > .card {
-      flex: 1 0 33%;
-      margin-bottom: 15px; } }
+    margin-right: 0;
+  }
+  .menu .cards > .card {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 33%;
+            flex: 1 0 33%;
+    margin-bottom: 15px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   header .header-left {
-    width: 100%; }
-    header .header-left .search-location {
-      margin: auto;
-      width: 200px; }
-
+    width: 100%;
+  }
+  header .header-left .search-location {
+    margin: auto;
+    width: 200px;
+  }
   aside .select {
-    flex-direction: column;
-    flex-flow: column; }
-
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-flow: column;
+        flex-flow: column;
+  }
   main .cards {
-    flex-flow: row wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
     margin-left: 0;
-    margin-right: 0; }
-    main .cards > .card {
-      flex: 1 0 33%;
-      margin-bottom: 15px; } }
+    margin-right: 0;
+  }
+  main .cards > .card {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 33%;
+            flex: 1 0 33%;
+    margin-bottom: 15px;
+  }
+}
+
 @media screen and (max-width: 576px) {
   header {
-    flex-flow: column; }
-    header .logo {
-      flex: 0 0 100%;
-      padding: 15px;
-      text-align: center; }
-      header .logo img {
-        object-fit: cover;
-        width: 60%; }
-    header .header-left {
-      width: 100%; }
-    header .search-location {
-      flex-direction: row;
-      justify-content: center;
-      margin-bottom: 0;
-      margin-left: 70px;
-      padding: 5px;
-      text-align: center; }
-    header .cover-img {
-      z-index: -1; }
-
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+  }
+  header .logo {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    padding: 15px;
+    text-align: center;
+  }
+  header .logo img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 60%;
+  }
+  header .header-left {
+    width: 100%;
+  }
+  header .search-location {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 0;
+    margin-left: 70px;
+    padding: 5px;
+    text-align: center;
+  }
+  header .cover-img {
+    z-index: -1;
+  }
   .reserve h2 {
-    margin: 0 15px; }
-
+    margin: 0 15px;
+  }
   main .cards {
-    flex-flow: column wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
     margin-left: 0;
-    margin-right: 0; }
-    main .cards > .card {
-      flex: 1 0 0;
-      margin-bottom: 15px; }
-
+    margin-right: 0;
+  }
+  main .cards > .card {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 0px;
+            flex: 1 0 0;
+    margin-bottom: 15px;
+  }
   .menu main {
     border-top-left-radius: 35px;
     border-top-right-radius: 35px;
     margin-top: -50px;
-    z-index: 999; }
-    .menu main h1.shrikhand {
-      font-size: 1.75rem;
-      padding: 30px 10px 20px 15px; }
-    .menu main .cards {
-      flex-flow: column nowrap; }
-      .menu main .cards h2.sub-title {
-        font-size: 1.25rem; }
-      .menu main .cards .card {
-        border-radius: 15px;
-        cursor: pointer;
-        flex-direction: row;
-        margin: 10px 0; }
-        .menu main .cards .card:hover .caption-check-box i {
-          left: 27%; }
-
+    z-index: 999;
+  }
+  .menu main h1.shrikhand {
+    font-size: 1.75rem;
+    padding: 30px 10px 20px 15px;
+  }
+  .menu main .cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+  }
+  .menu main .cards h2.sub-title {
+    font-size: 1.25rem;
+  }
+  .menu main .cards .card {
+    border-radius: 15px;
+    cursor: pointer;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin: 10px 0;
+  }
+  .menu main .cards .card:hover .caption-check-box i {
+    left: 27%;
+  }
   aside {
-    margin-top: 25px; }
-    aside .select {
-      display: flex;
-      flex-direction: column;
-      flex-flow: column;
-      padding: 15px;
-      position: relative; }
-    aside .step-button {
-      flex: 0 0 100%;
-      margin-left: 0;
-      margin-right: 0; }
-
+    margin-top: 25px;
+  }
+  aside .select {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-flow: column;
+        flex-flow: column;
+    padding: 15px;
+    position: relative;
+  }
+  aside .step-button {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
   footer {
-    text-align: left; }
-    footer .logo {
-      width: 150px; }
-      footer .logo img {
-        max-width: 150px; } }
+    text-align: left;
+  }
+  footer .logo {
+    width: 150px;
+  }
+  footer .logo img {
+    max-width: 150px;
+  }
+}
+
 @media screen and (max-width: 375px) {
   .menu .cards {
-    flex-direction: column;
-    flex-wrap: nowrap; } }
-
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
 /*# sourceMappingURL=media.css.map */
