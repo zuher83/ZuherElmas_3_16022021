@@ -11,7 +11,7 @@
   background: $btn1-color;
   border: 0;
   border-radius: 25px;
-  box-shadow: 2px 2px 10px 2px #e0e0e0;
+  box-shadow: $btn1-shadow;
   box-sizing: border-box;
   color: $white-color;
   cursor: pointer;
@@ -21,14 +21,14 @@
   padding: $btn-padding;
   text-align: center;
   text-decoration: none;
-  transition: all .2s;
+  transition: .2s;
 
   &:hover {
     background: linear-gradient(lighten($secondary, 5), lighten($primary, 5));
     box-shadow: $btn1-shadow-hover;
   }
-}
 
-a.button1 {
-  color: $white-color;
+  &a {
+    color: $white-color;
+  }
 }

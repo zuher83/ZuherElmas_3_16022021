@@ -16,7 +16,7 @@
       margin-left: 0;
       margin-right: 0;
 
-      > .card {
+      >.card {
         flex: 1 0 33%;
         margin-bottom: 15px;
       }
@@ -26,27 +26,32 @@
 
 @media screen and (max-width: 768px) {
 
-  header .header-left {
+  .header-left {
     width: 100%;
+
     .search-location {
       margin: auto;
       width: 200px;
     }
   }
 
-  aside .select {
-    flex-direction: column;
-    flex-flow: column;
+  aside {
+    .select {
+      flex-direction: column;
+      flex-flow: column;
+    }
   }
 
-  main .cards {
-    flex-flow: row wrap;
-    margin-left: 0;
-    margin-right: 0;
+  main {
+    .cards {
+      flex-flow: row wrap;
+      margin-left: 0;
+      margin-right: 0;
 
-    > .card {
-      flex: 1 0 33%;
-      margin-bottom: 15px;
+      >.card {
+        flex: 1 0 33%;
+        margin-bottom: 15px;
+      }
     }
   }
 }
@@ -84,18 +89,22 @@
     }
   }
 
-  .reserve h2 {
-    margin: 0 15px;
+  .reserve {
+    h2 {
+      margin: 0 15px;
+    }
   }
 
-  main .cards {
-    flex-flow: column wrap;
-    margin-left: 0;
-    margin-right: 0;
+  main {
+    .cards {
+      flex-flow: column wrap;
+      margin-left: 0;
+      margin-right: 0;
 
-    > .card {
-      flex: 1 0 0;
-      margin-bottom: 15px;
+      >.card {
+        flex: 1 0 0;
+        margin-bottom: 15px;
+      }
     }
   }
 
@@ -106,7 +115,7 @@
       margin-top: -50px;
       z-index: 999;
 
-      h1.shrikhand {
+      .shrikhand {
         font-size: 1.75rem;
         padding: 30px 10px 20px 15px;
       }
@@ -114,20 +123,11 @@
       .cards {
         flex-flow: column nowrap;
 
-        h2.sub-title {
+        .sub-title {
           font-size: 1.25rem;
         }
 
-        .card {
-          border-radius: 15px;
-          cursor: pointer;
-          flex-direction: row;
-          margin: 10px 0;
 
-          &:hover .caption-check-box i {
-            left: 27%;
-          }
-        }
       }
     }
   }
@@ -163,9 +163,24 @@
   }
 }
 
+.card-menu {
+  border-radius: 15px;
+  cursor: pointer;
+  flex-direction: row;
+  margin: 10px 0;
+
+  &:hover {
+    .fa-check-circle {
+      left: 27%;
+    }
+  }
+}
+
 @media screen and (max-width: 375px) {
-  .menu .cards {
-    flex-direction: column;
-    flex-wrap: nowrap;
+  .menu {
+    .cards {
+      flex-direction: column;
+      flex-wrap: nowrap;
+    }
   }
 }
